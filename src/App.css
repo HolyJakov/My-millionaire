@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App {
+  background-image: url("./assets/2018-Who-Wants-To-Be-A-Millionaire-colour-corrected.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.start {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.start input {
+  width: 250px;
+  height: 40px;
+  color: black;
+  font-size: 20px;
+  padding-left: 1rem;
+}
+.start input:focus {
+  outline: none;
+}
+.start button {
+  width: 250px;
+  background-color: blue;
+  height: 40px;
+}
+.game {
+  background-image: url("./assets/2018-Who-Wants-To-Be-A-Millionaire-colour-corrected.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.answers {
+  width: 40%;
+  border: 1px solid white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.7rem;
+  margin: 0px 10px 20px 10px;
+  background-color: rgb(1, 1, 27);
+  cursor: pointer;
+  font-size: 20px;
+}
+.answers:hover,
+.answers.active {
+  background-color: rgb(2, 2, 109);
+}
+.answers.correct {
+  animation: correct 4s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42%,
+  60% {
+    background-color: mediumblue;
+  }
+  20%,
+  38%,
+  50%,
+  65% {
+    background-color: rgb(2, 2, 109);
+  }
+  70%,
+  100% {
+    background-color: green;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.answers.wrong {
+  animation: wrong 4s ease forwards;
+}
+@keyframes wrong {
+  0%,
+  22%,
+  42%,
+  60% {
+    background-color: mediumblue;
   }
-  to {
-    transform: rotate(360deg);
+  20%,
+  38%,
+  50%,
+  65% {
+    background-color: rgb(2, 2, 109);
   }
+  70%,
+  100% {
+    background-color: crimson;
+  }
+}
+.teal {
+  background-color: teal;
+}
+.money-total {
+  position: absolute;
+  top: 34%;
+  left: 30%;
+  color: white;
+}
+.real-money {
+  overflow-y: scroll;
 }
