@@ -9,6 +9,7 @@ function App() {
   const [questionNumber,setQuestionNumber] = useState(0)
   const [showCode,setShowCode] = useState(false)
   const [username,setUsername] = useState(null)
+
   return (
     <div className="App">
     <>
@@ -25,9 +26,9 @@ function App() {
        setUsername ={setUsername}
       />
     </div>
-    <div className='real-money w-[25%] bg-slate-900 flex justify-center py-6 items-center '>
+      <div className='real-money w-[25%] bg-slate-900 flex justify-center py-6 items-center '>
       <Money questionNumber ={questionNumber}/>
-    </div>
+      </div>
   </div>)
     }
     </>  

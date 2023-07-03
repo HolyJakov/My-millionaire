@@ -16,7 +16,7 @@ const Games = ({questionNumber, setQuestionNumber,showCode,setShowCode,username,
           setQuestionNumber(0)
           setScore("$0")
             }}
-      >Exit / Restart</button></div>
+      >Exit</button></div>
         </div>
         <div className='user-details flex flex-col gap-2'>
           <h3 className='username text-orange-300'>User:{username}</h3>

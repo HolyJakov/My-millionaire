@@ -35,10 +35,10 @@
   height: 40px;
 }
 .game {
-  background-image: url("./assets/2018-Who-Wants-To-Be-A-Millionaire-colour-corrected.jpeg");
+  /* background-image: url("./assets/2018-Who-Wants-To-Be-A-Millionaire-colour-corrected.jpeg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 100vh;
 }
 .answers {
@@ -108,6 +108,25 @@
   left: 30%;
   color: white;
 }
-.real-money {
-  overflow-y: scroll;
+
+@media (max-width: 645px) {
+  .real-money {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .real-money {
+    font-size: 8px;
+  }
+}
+@media (max-width: 400px) {
+  .real-money {
+    font-size: 5px;
+  }
+
+  .logout {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
 }

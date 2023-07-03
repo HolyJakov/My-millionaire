@@ -58,6 +58,7 @@ const Trivia = ({questionNumber,setQuestionNumber,showCode, setShowCode,setTime,
         setGiveClass("answers wrong")
         wrongAnswer()
          setTimeout(()=>{setShowCode(true)},[4000])
+
        
       }
     };
